@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Сума вкладу за депозитом</title>
+</head>
+
+<body>
+    <script>
+        const VIDSOTOK = 5;
+        const TIMEDEPOSIT = 2;
+        let userMoney = prompt("Введіть суму вкладу на 2 місяці під 5% річних");
+        if (userMoney > 0) {
+            let sumaDepozytu = userMoney * (Math.pow((1 + VIDSOTOK / (12 * 100)), TIMEDEPOSIT));
+
+            alert(`Сума вашого вкладу  ${sumaDepozytu.toFixed(2)}`)
+        } else {
+            alert("Ви ввели неправильні дані, введіть будь ласка ціле число або дробове використовуючи 'крапку'")
+        }
+    </script>
+
+</body>
+
+</html>
