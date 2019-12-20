@@ -12,11 +12,11 @@
     <script>
         const VIDSOTOK = 5;
         const TIMEDEPOSIT = 2;
-        let userMoney = prompt("Введіть суму вкладу на 2 місяці під 5% річних");
+        let userMoney = prompt("Введіть суму вкладу на 2 місяці під 5% річних ");
         if (userMoney > 0) {
             let sumaDepozytu = userMoney * (Math.pow((1 + VIDSOTOK / (12 * 100)), TIMEDEPOSIT));
-
-            alert(`Сума вашого вкладу  ${sumaDepozytu.toFixed(2)}`)
+            let sumaVidsotkiv = sumaDepozytu - userMoney;
+            alert(`Сума нарахованих відсотків  ${sumaVidsotkiv.toFixed(2)}`)
         } else {
             alert("Ви ввели неправильні дані, введіть будь ласка ціле число або дробове використовуючи 'крапку'")
         }
